@@ -3,8 +3,6 @@
 exports[`Helpers index Exports expected helpers 1`] = `
 Array [
   "extractSignature",
-  "pdfkitAddPlaceholder",
-  "plainAddPlaceholder",
   "removeTrailingNewLine",
 ]
 `;
