@@ -1,5 +1,5 @@
 import PDFDocument from 'pdfkit';
-import pdfkitAddPlaceholder from './src/pdfkitAddPlaceholder';
+import pdfkitAddPlaceholder from '../src/pdfkitAddPlaceholder';
 
 /**
  * Creates a Buffer containing a PDF.
