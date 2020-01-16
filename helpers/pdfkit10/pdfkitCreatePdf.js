@@ -1,3 +1,6 @@
+import PDFDocument from 'pdfkit';
+import pdfkitAddPlaceholder from './src/pdfkitAddPlaceholder';
+
 /**
  * Creates a Buffer containing a PDF.
  * Returns a Promise that is resolved with the resulting Buffer of the PDFDocument.
