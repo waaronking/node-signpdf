@@ -1,7 +1,7 @@
 {
   "name": "node-signpdf-helper-pdfkit10",
   "version": "1.0.0",
-  "description": "Helper utility for node_signpdf with foliojs/pdfkit",
+  "description": "Helper utility for node-signpdf with foliojs/pdfkit",
   "main": "dist/pdfkitAddPlaceholder.js",
   "license": "MIT",
   "repository": {
@@ -46,7 +46,6 @@
     "eslint-plugin-jest": "^22.4.1",
     "jest": "^24.5.0",
     "node-signpdf": "^2.0.0",
-    "node-forge": "^0.7.6",
     "pdfkit": "^0.10.0"
   }
 }
