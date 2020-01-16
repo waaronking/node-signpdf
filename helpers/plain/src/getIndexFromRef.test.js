@@ -1,5 +1,5 @@
+import {SignPdfError} from 'node-signpdf';
 import getIndexFromRef from './getIndexFromRef';
-import SignPdfError from '../../SignPdfError';
 
 describe('getIndexFromRef', () => {
     it('Errors when ref is not found', () => {

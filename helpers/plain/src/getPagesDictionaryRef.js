@@ -1,4 +1,4 @@
-import SignPdfError from '../../SignPdfError';
+import {SignPdfError} from 'node-signpdf';
 
 /**
  * @param {Object} info As extracted from readRef()

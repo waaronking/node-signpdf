@@ -1,9 +1,8 @@
-import PDFObject from '../pdfkit/pdfobject';
-import PDFKitReferenceMock from '../pdfkitReferenceMock';
-import removeTrailingNewLine from '../removeTrailingNewLine';
-import {DEFAULT_SIGNATURE_LENGTH} from '../const';
-import pdfkitAddPlaceholder from '../pdfkitAddPlaceholder';
-
+import {removeTrailingNewLine} from 'node-signpdf';
+import PDFObject from './pdfkit/pdfobject';
+import PDFKitReferenceMock from './pdfkitReferenceMock';
+import {DEFAULT_SIGNATURE_LENGTH} from './const';
+import pdfkitAddPlaceholder from './pdfkitAddPlaceholder';
 import getIndexFromRef from './getIndexFromRef';
 import readPdf from './readPdf';
 import getPageRef from './getPageRef';

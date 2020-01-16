@@ -1,4 +1,4 @@
-import SignPdfError from '../../SignPdfError';
+import {SignPdfError} from 'node-signpdf';
 
 /**
  * @param {object} refTable

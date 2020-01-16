@@ -1,5 +1,5 @@
+import {SignPdfError} from 'node-signpdf';
 import getPagesDictionaryRef from './getPagesDictionaryRef';
-import SignPdfError from '../../SignPdfError';
 
 describe('getPagesDictionaryRef', () => {
     it('Errors when pages descriptor is not found', () => {
@@ -23,7 +23,7 @@ describe('getPagesDictionaryRef', () => {
         };
 
         const pagesRef = getPagesDictionaryRef(info);
-        expect(pagesRef).toBe("14 0 R")
+        expect(pagesRef).toBe('14 0 R');
     });
 
     it('getPagesDictionaryRef gets pages descriptor when info root is in another order', () => {
@@ -32,6 +32,6 @@ describe('getPagesDictionaryRef', () => {
         };
 
         const pagesRef = getPagesDictionaryRef(info);
-        expect(pagesRef).toBe("2 0 R")
-    }); 
+        expect(pagesRef).toBe('2 0 R');
+    });
 });

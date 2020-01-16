@@ -21,7 +21,7 @@
         "pkcs#7",
         "digital signature"
     ],
-    "main": "dist/signpdf.js",
+    "main": "dist/index.js",
     "engines": {
         "node": ">=8.9"
     },
