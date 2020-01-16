@@ -2,7 +2,7 @@
   "name": "node-signpdf-helper-pdfkit10",
   "version": "1.0.0",
   "description": "Helper utility for node_signpdf with foliojs/pdfkit",
-  "main": "index.js",
+  "main": "dist/pdfkitAddPlaceholder.js",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -16,9 +16,7 @@
     "test": "./node_modules/.bin/jest",
     "test:watch": "./node_modules/.bin/jest --watch",
     "build": "./node_modules/.bin/babel ./src -d ./dist --ignore \"**/*.test.js\"",
-    "build:watch": "./node_modules/.bin/babel --watch ./src -d ./dist --ignore \"**/*.test.js\"",
-    "precommit": "npm run lint",
-    "prepush": "npm run test"
+    "build:watch": "./node_modules/.bin/babel --watch ./src -d ./dist --ignore \"**/*.test.js\""
   },
   "jest": {
     "testPathIgnorePatterns": [
