@@ -4,13 +4,11 @@ import {extractSignature} from './helpers';
 import SignPdfError from './SignPdfError';
 
 describe('Helpers', () => {
+    const resources = `${__dirname}/../../resources`;
+
     it('extract signature from signed pdf', async () => {
-        const pdfBuffer = await createPdf({
-            placeholder: {
-                signatureLength: 1612,
-            },
-        });
-        const p12Buffer = fs.readFileSync(`${__dirname}/../resources/certificate.p12`);
+        const pdfBuffer = fs.readFileSync(`${resources}/generated/with-defaults.pdf`);
+        const p12Buffer = fs.readFileSync(`${resources}/certificate.p12`);
 
         const signedPdfBuffer = signer.sign(pdfBuffer, p12Buffer);
         const originalSignature = signer.lastSignature;

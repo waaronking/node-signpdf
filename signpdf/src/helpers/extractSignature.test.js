@@ -3,6 +3,8 @@ import extractSignature from './extractSignature';
 import SignPdfError from '../SignPdfError';
 
 describe('extractSignature', () => {
+    const resources = `${__dirname}/../../../resources`;
+    
     it('expects PDF to be Buffer', () => {
         try {
             extractSignature('non-buffer');
@@ -39,7 +41,7 @@ describe('extractSignature', () => {
         }
     });
     it('extracts signature', () => {
-        const signedPdf = fs.readFileSync(`${__dirname}/../../resources/signed.pdf`);
+        const signedPdf = fs.readFileSync(`${resources}/signed.pdf`);
         const extracted = extractSignature(signedPdf);
         expect(extracted).toMatchSnapshot();
     });
