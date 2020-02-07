@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.com/vbuch/node-signpdf.svg?branch=master)](https://travis-ci.com/vbuch/node-signpdf)
 [![Coverage Status](https://coveralls.io/repos/github/vbuch/node-signpdf/badge.svg?branch=master)](https://coveralls.io/github/vbuch/node-signpdf?branch=master)
 [![Known Vulnerabilities](https://snyk.io/test/npm/node-signpdf/badge.svg)](https://snyk.io/test/npm/node-signpdf)
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
 Simple signing of PDFs in node.
 
