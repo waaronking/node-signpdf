@@ -12,11 +12,11 @@
     "node": ">=8.9"
   },
   "scripts": {
-    "test:coverage": "./node_modules/.bin/jest --coverage",
-    "test": "./node_modules/.bin/jest",
-    "test:watch": "./node_modules/.bin/jest --watch",
-    "build": "./node_modules/.bin/babel ./src -d ./dist --ignore \"**/*.test.js\"",
-    "build:watch": "./node_modules/.bin/babel --watch ./src -d ./dist --ignore \"**/*.test.js\""
+    "test:coverage": "../../node_modules/.bin/jest --coverage",
+    "test": "../../node_modules/.bin/jest",
+    "test:watch": "../../node_modules/.bin/jest --watch",
+    "build": "../../node_modules/.bin/babel ./src -d ./dist --ignore \"**/*.test.js\"",
+    "build:watch": "../../node_modules/.bin/babel --watch ./src -d ./dist --ignore \"**/*.test.js\""
   },
   "jest": {
     "testPathIgnorePatterns": [
