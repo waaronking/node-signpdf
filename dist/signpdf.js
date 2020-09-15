@@ -57,13 +57,23 @@ class SignPdf {
       throw new _SignPdfError.default(`Could not find ByteRange placeholder: ${byteRangeString}`, _SignPdfError.default.TYPE_PARSE);
     } // Calculate the actual ByteRange that needs to replace the placeholder.
 
+    console.log('byteRangePos, byteRangeString.length', byteRangePos, byteRangeString.length);
 
     const byteRangeEnd = byteRangePos + byteRangeString.length;
+
     const contentsTagPos = pdf.indexOf('/Contents ', byteRangeEnd);
+    console.log("contentsTagPos", contentsTagPos);
+
     const placeholderPos = pdf.indexOf('<', contentsTagPos);
+    console.log("placeholderPos", placeholderPos);
+
     const placeholderEnd = pdf.indexOf('>', placeholderPos);
+    console.log("placeholderEnd", placeholderEnd);
+
     const placeholderLengthWithBrackets = placeholderEnd + 1 - placeholderPos;
     const placeholderLength = placeholderLengthWithBrackets - 2;
+    console.log("placeholderLength", placeholderLength);
+
     const byteRange = [0, 0, 0, 0];
     byteRange[1] = placeholderPos;
     byteRange[2] = byteRange[1] + placeholderLengthWithBrackets;
@@ -143,6 +153,7 @@ class SignPdf {
     const raw = _nodeForge.default.asn1.toDer(p7.toAsn1()).getBytes(); // placeholderLength represents the length of the HEXified symbols but we're
     // checking the actual lengths.
 
+    console.log('raw.length * 2, placeholderLength', raw.length * 2, placeholderLength);
 
     if (raw.length * 2 > placeholderLength) {
       throw new _SignPdfError.default(`Signature exceeds placeholder length: ${raw.length * 2} > ${placeholderLength}`, _SignPdfError.default.TYPE_INPUT);
