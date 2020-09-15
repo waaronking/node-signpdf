@@ -45,7 +45,11 @@ export class SignPdf {
             `/${this.byteRangePlaceholder}`,
             `/${this.byteRangePlaceholder}`,
         ];
-        const byteRangeString = `/ByteRange [${byteRangePlaceholder.join(' ')}]`;
+        const byteRangeStrings = [
+            `/ByteRange [${byteRangePlaceholder.join(' ')}]`,
+            `/ByteRange [ ${byteRangePlaceholder.join(' ')} ]`
+          ];
+        const byteRangeString = byteRangeStrings.find(s => pdf.indexOf(s) !== -1) || byteRangeStrings[0];
         const byteRangePos = pdf.indexOf(byteRangeString);
         if (byteRangePos === -1) {
             throw new SignPdfError(

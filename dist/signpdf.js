@@ -46,7 +46,11 @@ class SignPdf {
     let pdf = (0, _helpers.removeTrailingNewLine)(pdfBuffer); // Find the ByteRange placeholder.
 
     const byteRangePlaceholder = [0, `/${this.byteRangePlaceholder}`, `/${this.byteRangePlaceholder}`, `/${this.byteRangePlaceholder}`];
-    const byteRangeString = `/ByteRange [${byteRangePlaceholder.join(' ')}]`;
+    const byteRangeStrings = [
+      `/ByteRange [${byteRangePlaceholder.join(' ')}]`,
+      `/ByteRange [ ${byteRangePlaceholder.join(' ')} ]`
+    ];
+    const byteRangeString = byteRangeStrings.find(s => pdf.indexOf(s) !== -1) || byteRangeStrings[0];
     const byteRangePos = pdf.indexOf(byteRangeString);
 
     if (byteRangePos === -1) {
